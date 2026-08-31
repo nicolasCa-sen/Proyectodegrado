@@ -1,0 +1,35 @@
+# MUIG - Ignorar modelos 3D pesados (a petición del usuario 2026-08-31)
+# Cada elemento se guarda en su subcarpeta dentro de modelo3d/ (ver SKILL.md)
+# Se ignoran para no saturar el repo git con binarios grandes; se mantienen en disco local y en backup externo
+
+# Carpetas de modelos 3D (ambos alias: sin y con espacio) - el symlink también se ignora
+modelo3d/
+modelo3d/**
+modelos\ 3d/
+modelos\ 3d/**
+modelos 3d
+modelos 3d/**
+
+# Archivos binarios Blender / glTF (por si quedan fuera de modelo3d/)
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.stl
+
+# Archivos de sistema macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporales Blender
+*.tmp
+*~
+
+# Logs y caches
+*.log
+__pycache__/
+*.pyc
