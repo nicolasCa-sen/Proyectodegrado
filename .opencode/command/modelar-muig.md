@@ -3,7 +3,7 @@ description: Modela en 3D (Blender) un mineral, muestra o escenario del proyecto
 agent: modelador-muig
 ---
 
-Modela en Blender (vía MCP) lo indicado, siguiendo el skill `modelado-muig` y usando la información de `Documentos/Investigacion_Minerales.md` y `Documentos/Especificaciones_Proyecto_MUIG.md`.
+Modela en Blender (vía MCP) lo indicado, siguiendo el skill `modelado-muig` y usando la información de `Documentos/Documentos investigacion/` y `Documentos/Especificaciones_Proyecto_MUIG.md`.
 
 Solicitud: $ARGUMENTS
 

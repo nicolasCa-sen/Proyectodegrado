@@ -3,7 +3,7 @@ description: Investiga un mineral en la web y documenta su información geológi
 agent: investigador-mineral
 ---
 
-Investiga el mineral indicado y documenta toda su información geológica en el archivo MD de investigación, siguiendo el skill `investigacion-mineral`.
+Investiga el mineral indicado y documenta toda su información geológica en `Documentos/Documentos investigacion/{Nombre}.md`, siguiendo el skill `investigacion-mineral`.
 
 Mineral a investigar: $ARGUMENTS
 

@@ -20,7 +20,7 @@ Cuando el usuario te dé la orden de investigar un mineral (por nombre o señala
 1. Identifica el mineral (por el nombre dado o por las carpetas de muestras fotográficas).
 2. Busca en la web fuentes confiables (mindat.org, geology.com, USGS, GIA, Britannica, Wikipedia, WebMineral) usando `websearch` y `webfetch`. Registra la URL completa de CADA fuente consultada.
 3. Recopila TODA la información de las 9 secciones del skill: identificación/composición, tipo de formación, lugares de extracción, forma física exacta, **materiales circundantes y asociados** (matriz, roca huésped, ganga, minerales asociados, estratos vecinos), color, textura/propiedades, datos numéricos para modelado 3D, y fuentes web.
-4. Organiza la información y agrégalo/actualízalo en `Documentos/Investigacion_Minerales.md` con la estructura exacta del skill.
+4. Guarda la información en `Documentos/Documentos investigacion/{Nombre_Mineral}.md` (un archivo por mineral, nombre normalizado con `_` según a lo que hace referencia, ej. `Carbon_Bituminoso.md`) con la estructura exacta del skill, y actualiza el índice `Documentos/Documentos investigacion/Indice.md`.
 
 Reglas:
 - Valores numéricos exactos (dureza Mohs, densidad g/cm³, dimensiones en cm, espesores en m) en todas las secciones.

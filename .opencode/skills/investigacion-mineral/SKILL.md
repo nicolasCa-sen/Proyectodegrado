@@ -1,6 +1,6 @@
 ---
 name: investigacion-mineral
-description: Investigación geológica detallada en la web sobre un mineral o roca para modelado 3D. Use cuando el usuario pida investigar, buscar o recopilar información sobre un mineral o roca (esmeralda, caliza, carbón, hierro, hematita, etc.), ya sea de la carpeta "muestras Fotograficas" o de cualquier mineral nuevo. Investiga también los materiales circundantes (matriz, roca huésped, ganga, materiales asociados) y documenta TODA afirmación con su fuente web y link adjunto. Produce documentación organizada en el archivo MD de investigación de minerales.
+description: Investigación geológica detallada en la web sobre un mineral o roca para modelado 3D. Use cuando el usuario pida investigar, buscar o recopilar información sobre un mineral o roca (esmeralda, caliza, carbón, hierro, hematita, etc.), ya sea de la carpeta "muestras Fotograficas" o de cualquier mineral nuevo. Investiga también los materiales circundantes (matriz, roca huésped, ganga, materiales asociados) y documenta TODA afirmación con su fuente web y link adjunto. Produce documentación organizada en la carpeta Documentos/Documentos investigacion con el nombre del mineral.
 ---
 
 # Investigación de Minerales para Modelado 3D
@@ -54,11 +54,11 @@ Regla de citación: cada sección (1-8) termina con una línea `*Fuentes: [títu
 - **NUNCA escribas un dato sin su link de fuente.** Si no encontraste fuente confiable para un dato, omítelo o márcalo como `[sin fuente confirmada]` en lugar de inventarlo.
 - Idioma: español.
 
-## Paso 5: Guardar en archivos MD separados (actualizado 2026-08-30)
+## Paso 5: Guardar en Documentos/Documentos investigacion (actualizado 2026-09-09)
 
-- **ARCHIVO SEPARADO POR MINERAL (obligatorio):** El destino es `Documentos/Minerales/{Nombre_Mineral}.md` (ej. `Documentos/Minerales/Esmeralda_Boyacense.md`, `Documentos/Minerales/Caliza.md`). Si no existe la carpeta `Documentos/Minerales/`, créala con `mkdir -p`. Cada mineral tiene su propio archivo con el nombre normalizado (sin espacios, usa `_`).
-- **ÍNDICE CENTRAL:** El archivo `Documentos/Investigacion_Minerales.md` es el **índice** que lista todos los minerales. Tras crear/actualizar un mineral, ACTUALIZA la tabla índice en ese archivo con una fila nueva (columnas: Mineral | Archivo separado | Fórmula | Dureza | Densidad | Formación | Fecha). NO agregues el contenido completo del mineral al índice.
-- Si el mineral ya está documentado, ACTUALIZA su archivo separado `Documentos/Minerales/{Nombre}.md` (no dupliques ni crees un segundo archivo).
+- **ARCHIVO SEPARADO POR MINERAL (obligatorio):** El destino es `Documentos/Documentos investigacion/{Nombre_Mineral}.md` (ej. `Documentos/Documentos investigacion/Esmeralda_Boyacense.md`, `Documentos/Documentos investigacion/Caliza.md`, `Documentos/Documentos investigacion/Carbon_Bituminoso.md`). Si no existe la carpeta `Documentos/Documentos investigacion/`, créala con `mkdir -p`. Cada mineral tiene su propio archivo con el nombre normalizado a lo que hace referencia (sin espacios, usa `_`).
+- **ÍNDICE CENTRAL:** El archivo `Documentos/Documentos investigacion/Indice.md` (si no existe, créalo) es el **índice** que lista todos los minerales. Tras crear/actualizar un mineral, ACTUALIZA la tabla índice en ese archivo con una fila nueva (columnas: Mineral | Archivo separado | Fórmula | Dureza | Densidad | Formación | Fecha). NO agregues el contenido completo del mineral al índice.
+- Si el mineral ya está documentado, ACTUALIZA su archivo separado `Documentos/Documentos investigacion/{Nombre}.md` (no dupliques ni crees un segundo archivo).
 - Formato de cada archivo separado: un `#` con el nombre del mineral (ej. `# Esmeralda Boyacense`), con las 9 secciones como `##` dentro de ese archivo.
 - Usa una tabla de resumen al inicio de cada archivo separado con: nombre, fórmula, dureza Mohs, densidad, color principal, formación geológica, y las fuentes principales.
 - Antes de escribir, confirma el resultado al usuario (incluyendo la lista de fuentes encontradas); después de escribir, avísale que los archivos fueron actualizados y sus rutas/lineas. Indica tanto la ruta del archivo separado como la del índice.

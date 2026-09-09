@@ -37,5 +37,5 @@ Resumen técnico extraído de `Documentos/Propuesta proyecto de Grado.docx` para
 
 ## Fuente de datos geológicos para modelar
 
-- `Documentos/Investigacion_Minerales.md`: documentación geológica por mineral (formación, extracción, forma física, color, textura, datos numéricos) generada por el agente `investigador-mineral`. **Es la fuente primaria para decidir forma, materiales y escenarios de cada modelo.**
+- `Documentos/Documentos investigacion/`: documentación geológica por mineral (un archivo por mineral con el nombre a lo que hace referencia, ej. `Carbon_Bituminoso.md`, más `Indice.md`) con formación, extracción, forma física, color, textura, datos numéricos, generada por el agente `investigador-mineral`. **Es la fuente primaria para decidir forma, materiales y escenarios de cada modelo.**
 - Fotografías de referencia: carpeta `muestras Fotograficas/<Mineral>/`.
