@@ -7,6 +7,7 @@
 | # | Mineral | Archivo separado | Fórmula | Dureza Mohs | Densidad g/cm³ | Formación | Fecha | Estado |
 |---|---------|----------------|---------|-------------|----------------|-----------|-------|--------|
 | 1 | **Carbón Bituminoso Boyacá** | [Carbon_Bituminoso.md](Carbon_Bituminoso.md) | C 60-80% (típ. 84.4% C) | 2.2-3.8 | 1.32 (rango 1.10-1.80, banco 1.346) | Sedimentaria orgánica Fm. Guaduas 68-60 Ma, mantos 0.6-2.9 m | 2026-09-09 | ✅ Completo - 9 secciones - 16 fuentes |
+| 2 | **Esmeralda Boyacense (Muzo · Coscuez · Chivor)** | [Esmeralda_Boyacense.md](Esmeralda_Boyacense.md) | Be₃Al₂Si₆O₁₈ + Cr/V | 7.5-8 | ~2.72 (rango 2.63-2.92) | Sedimentaria-hidrotermal, shales negros + evaporitas Cretácico, cinturones Boyacá | 2026-10-19 | ✅ Completo - 9 secciones - 10 fuentes |
 
 ## Cómo investigar un nuevo mineral (resumen skill)
 

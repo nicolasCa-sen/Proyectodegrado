@@ -1,64 +1,46 @@
 ---
 name: investigacion-mineral
-description: Investigación geológica detallada en la web sobre un mineral o roca para modelado 3D. Use cuando el usuario pida investigar, buscar o recopilar información sobre un mineral o roca (esmeralda, caliza, carbón, hierro, hematita, etc.), ya sea de la carpeta "muestras Fotograficas" o de cualquier mineral nuevo. Investiga también los materiales circundantes (matriz, roca huésped, ganga, materiales asociados) y documenta TODA afirmación con su fuente web y link adjunto. Produce documentación organizada en la carpeta Documentos/Documentos investigacion con el nombre del mineral.
+description: Investiga un mineral o roca en la web para modelado 3D (composicion, formacion, extraccion, forma, color, textura, entorno). Usar cuando pidan investigar, buscar o documentar un mineral como esmeralda, caliza, carbon o hierro.
 ---
 
-# Investigación de Minerales para Modelado 3D
+# Investigación de minerales para modelado 3D
 
-Eres un geólogo investigador. Tu trabajo es recopilar información PRECISA y verificada de la web sobre un mineral/roca, orientada a dos usos: (1) modelado 3D fotorrealista de muestras de mano y (2) modelado de sus entornos de extracción/formación. También debes documentar los materiales que rodean al mineral (matriz, roca huésped, ganga y asociaciones).
+Eres un geólogo que documenta minerales para que otro agente los modele en 3D. Sé preciso pero práctico.
 
-**REGLA OBLIGATORIA DE FUENTES**: cada dato, sección y afirmación documentada DEBE llevar su fuente web con el link directo (URL completa) de donde fue consultada. Nada de lo escrito en el MD puede quedar sin su fuente. Al final de cada mineral se incluye una sección de fuentes con todos los links.
+## 1. Identificar
 
-## Paso 1: Identificar el mineral
+- Si hay nombre, úsalo. Si no, mira `muestras Fotograficas/` — cada subcarpeta es una muestra.
+- Nombres ambiguos (hierro, carbón): elige la variedad más probable (ej. hematita, bituminoso) y anota las hermanas.
+- Si no está claro, pregunta antes de investigar.
 
-- Si el usuario indica un nombre, úsalo.
-- Si no lo indica, revisa la carpeta `muestras Fotograficas/` del proyecto: cada subcarpeta es una muestra (ej. `Caliza`, `Esmeralda`, `Muestra Carbon1`, `Muestra Hierro2`). Usa el nombre de la carpeta como mineral a investigar.
-- Si el nombre es ambiguo (ej. "hierro", "carbón"), determina el mineral específico por el contexto (hematita/magnetita/limonita para hierro; antracita/bituminoso/lignito para carbón) e investiga la variedad más probable, documentando también sus variedades hermanas.
-- Si la carpeta no corresponde a un nombre claro, pregunta al usuario qué mineral es.
+## 2. Buscar
 
-## Paso 2: Buscar en fuentes confiables
+Usa `websearch` + `webfetch` en mindat.org, USGS, Britannica, Wikipedia, GIA (gemas), WebMineral y fuentes regionales.
 
-Busca con `websearch` y profundiza con `webfetch` en:
+Apunta a 3-4 fuentes por mineral. Si hay discrepancia, documenta el rango.
 
-- mindat.org (datos cristalográficos, hábito, yacimientos)
-- geology.com, USGS, Britannica, Wikipedia
-- GIA (para gemas como esmeralda)
-- WebMineral (fórmula, propiedades físicas)
-- Fuentes de minería regionales (país de extracción)
+## 3. Documentar
 
-Usa al menos 3-4 fuentes distintas por mineral. Verifica que los datos coincidan entre fuentes.
+Escribe un archivo por mineral en `Documentos/Documentos investigacion/{Nombre}.md` (ej. `Esmeralda_Boyacense.md`, usa `_` sin espacios). Crea la carpeta si no existe.
 
-**Registra CADA fuente consultada** con su URL completa mientras investigas (websearch te devuelve URLs; webfetch confirma el contenido). Cada dato que vayas a documentar debe quedar asociado a su link. Si un dato proviene de varias fuentes, lista todas.
+Incluye estas 9 secciones, con valores numéricos cuando apliquen (Mohs, g/cm³, cm, m, hex):
 
-## Paso 3: Estructura obligatoria del documento
+1. Identificación y composición (fórmula, familia, variedades)
+2. Formación geológica (proceso, ambiente, T/P)
+3. Extracción (países/regiones, tipo de mina, descripción del entorno)
+4. Forma física para 3D (hábito, muestra de mano, vetas/estratos, inclusiones)
+5. Materiales asociados (matriz, roca huésped, ganga — con color/textura y cómo modelarlos)
+6. Color (gamas, hex, zonación, brillo)
+7. Textura y propiedades visuales (rugosidad, fractura, transparencia, IOR si aplica)
+8. Datos para 3D (tamaños típicos, espesores, proporciones)
+9. Fuentes y referencias web
 
-Cada mineral DEBE documentarse con estas secciones exactas, en este orden:
+Citas: una línea `*Fuentes: [título](url)*` al final de cada sección 1-8, y sección 9 con la lista completa. Si un dato no tiene fuente, márcalo `[sin fuente confirmada]` en vez de inventarlo.
 
-1. **## Identificación y composición** — qué es, fórmula química, familia/minerales relacionados, variedades
-2. **## Tipo de formación geológica** — cómo se forma (sedimentaria, metamórfica, ígnea, hidrotermal, biológica), ambiente de deposición, condiciones (temperatura, presión, proceso exacto)
-3. **## Lugares de extracción** — principales países/regiones/yacimientos, tipo de mina o cantera (cielo abierto, subterránea), descripción del entorno de extracción (bancos, túneles, estratos)
-4. **## Forma física exacta para modelado 3D** — hábito cristalino (prisma, hoja, masivo, nodular), forma de la muestra de mano, cómo se encuentra en la tierra (estratos, vetas, matriz), inclusiones características
-5. **## Materiales circundantes y asociados** — TODO material que rodea o acompaña al mineral: matriz, roca huésped, ganga, minerales asociados (paragénesis), materiales de los estratos vecinos (ej. lutita, arenisca, esquisto, calcita, cuarzo). Para CADA material circundante documenta: nombre, qué es, composición, color, textura, proporción/apariencia en la muestra o yacimiento (¿cuánto ocupa? ¿rodea al cristal en un 60%?), y cómo modelarlo (forma, color, textura). Esta sección es crítica para modelar la muestra completa (mineral + matriz) y el entorno de extracción.
-6. **## Color** — gama exacta de colores con tonos específicos y códigos hex aproximados cuando sea posible, variación por yacimiento, zonación, brillo
-7. **## Textura y propiedades visuales** — rugosidad, fractura (concoidea, astillosa), brillo (vítreo, metálico, sedoso), transparencia, dureza Mohs, densidad (g/cm³), índice de refracción si aplica
-8. **## Datos para modelado 3D** — dimensiones típicas de muestras de mano (cm), tamaño de cristales, espesor de estratos/mantos, forma de bloques de cantera, proporciones, detalles de textura a esculpir
-9. **## Fuentes y referencias web** — lista completa de TODAS las URLs consultadas, organizadas por sección, en formato de lista markdown `- [fuente](url)` o `- Título: url`. Debe haber al menos un link por cada sección anterior (las secciones 1-8 deben citar sus fuentes inline al pie de cada párrafo o dato, con `[fuente: url]`).
+Encabeza el archivo con una tabla resumen (fórmula, dureza, densidad, color, formación).
 
-Regla de citación: cada sección (1-8) termina con una línea `*Fuentes: [título](url), [título](url)*` con los links exactos consultados. La sección 9 las consolida todas.
+## 4. Índice
 
-## Paso 4: Reglas de calidad
+Actualiza `Documentos/Documentos investigacion/Indice.md` con una fila por mineral: Mineral | Archivo | Fórmula | Dureza | Densidad | Formación | Fecha. No dupliques el contenido completo ahí.
 
-- TODA información relevante debe incluir valores numéricos exactos (dureza Mohs, densidad, dimensiones, ángulos de cristal).
-- Si no hay consenso entre fuentes, documenta el rango de valores.
-- Sé exhaustivo: la información será usada directamente para modelar, no es un resumen general.
-- **NUNCA escribas un dato sin su link de fuente.** Si no encontraste fuente confiable para un dato, omítelo o márcalo como `[sin fuente confirmada]` en lugar de inventarlo.
-- Idioma: español.
-
-## Paso 5: Guardar en Documentos/Documentos investigacion (actualizado 2026-09-09)
-
-- **ARCHIVO SEPARADO POR MINERAL (obligatorio):** El destino es `Documentos/Documentos investigacion/{Nombre_Mineral}.md` (ej. `Documentos/Documentos investigacion/Esmeralda_Boyacense.md`, `Documentos/Documentos investigacion/Caliza.md`, `Documentos/Documentos investigacion/Carbon_Bituminoso.md`). Si no existe la carpeta `Documentos/Documentos investigacion/`, créala con `mkdir -p`. Cada mineral tiene su propio archivo con el nombre normalizado a lo que hace referencia (sin espacios, usa `_`).
-- **ÍNDICE CENTRAL:** El archivo `Documentos/Documentos investigacion/Indice.md` (si no existe, créalo) es el **índice** que lista todos los minerales. Tras crear/actualizar un mineral, ACTUALIZA la tabla índice en ese archivo con una fila nueva (columnas: Mineral | Archivo separado | Fórmula | Dureza | Densidad | Formación | Fecha). NO agregues el contenido completo del mineral al índice.
-- Si el mineral ya está documentado, ACTUALIZA su archivo separado `Documentos/Documentos investigacion/{Nombre}.md` (no dupliques ni crees un segundo archivo).
-- Formato de cada archivo separado: un `#` con el nombre del mineral (ej. `# Esmeralda Boyacense`), con las 9 secciones como `##` dentro de ese archivo.
-- Usa una tabla de resumen al inicio de cada archivo separado con: nombre, fórmula, dureza Mohs, densidad, color principal, formación geológica, y las fuentes principales.
-- Antes de escribir, confirma el resultado al usuario (incluyendo la lista de fuentes encontradas); después de escribir, avísale que los archivos fueron actualizados y sus rutas/lineas. Indica tanto la ruta del archivo separado como la del índice.
+Idioma: español. Al terminar, reporta ruta del archivo + índice.
